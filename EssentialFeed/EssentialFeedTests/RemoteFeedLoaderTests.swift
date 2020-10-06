@@ -9,23 +9,32 @@ import XCTest
 
 class RemoteFeedLoader {
     func load() {
-        HTTPClient.shared.requestedURL = URL(string: "https://a-url.com")
+        HTTPClient.shared.get(from: URL(string: "https://a-url.com")!)
     }
 }
 
-// Does not make a good match for a singleton. Why does it have to be a singleton?
-// We could very well have more than one HTTPClient.
 class HTTPClient {
-    static let shared = HTTPClient()
-    
-    private init() { }
+    // Not a singleton anymore, we have some global mutable state but it allows this class
+    // to be mocked during tests.
+    static var shared = HTTPClient()
+        
+    func get(from url: URL) {
+        
+    }
+}
+
+class HTTPClientSpy: HTTPClient {
+    override func get(from url: URL) {
+        requestedURL = url
+    }
     
     var requestedURL: URL?
 }
 
 class RemoteFeedLoaderTests: XCTestCase {
     func test_init_doesNotRequestDataFromURL() {
-        let client = HTTPClient.shared
+        let client = HTTPClientSpy()
+        HTTPClient.shared = client
         _ = RemoteFeedLoader()
         
         // Assert we didn't make a URL Request since that should only happen when `load()` is invoked.
@@ -34,7 +43,8 @@ class RemoteFeedLoaderTests: XCTestCase {
     
     func test_load_requestDataFromURL() {
         // Arrange. "Given a client and a sut"
-        let client = HTTPClient.shared
+        let client = HTTPClientSpy()
+        HTTPClient.shared = client
         let sut = RemoteFeedLoader()
         
         // Act. "When we invoke sut.load()"
