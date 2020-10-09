@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				FA50A939252AD568005C33A2 /* Info.plist */,
-				FAB46BDF252D7D7100D42054 /* Feed API */,
-				FA50A95C252AD6EF005C33A2 /* Feed Feature */,
+				FA8B34DB2530211900C16B64 /* Feed Feature */,
+				FA8B34DA2530210200C16B64 /* Feed API */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -95,23 +95,23 @@
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
 		};
-		FA50A95C252AD6EF005C33A2 /* Feed Feature */ = {
-			isa = PBXGroup;
-			children = (
-				FA50A953252AD598005C33A2 /* FeedItem.swift */,
-				FA50A957252AD5EE005C33A2 /* FeedLoader.swift */,
-			);
-			name = "Feed Feature";
-			sourceTree = "<group>";
-		};
-		FAB46BDF252D7D7100D42054 /* Feed API */ = {
+		FA8B34DA2530210200C16B64 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
 				FAB46BE0252D7D8200D42054 /* RemoteFeedLoader.swift */,
 				FA8B34D22530208300C16B64 /* FeedItemsMapper.swift */,
 				FA8B34CE2530202800C16B64 /* HTTPClient.swift */,
 			);
-			name = "Feed API";
+			path = "Feed API";
+			sourceTree = "<group>";
+		};
+		FA8B34DB2530211900C16B64 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				FA50A953252AD598005C33A2 /* FeedItem.swift */,
+				FA50A957252AD5EE005C33A2 /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
