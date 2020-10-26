@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0630AD2546813A0089D667 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0630AC2546813A0089D667 /* RemoteFeedItem.swift */; };
 		FA1783A625381A2F000BBD32 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1783A525381A2F000BBD32 /* URLSessionHTTPClient.swift */; };
 		FA1BD91E25354A4C00823540 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BD91D25354A4C00823540 /* URLSessionHTTPClientTests.swift */; };
 		FA2DF84B2545439900EDE5C0 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DF84A2545439900EDE5C0 /* LocalFeedLoader.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0630AC2546813A0089D667 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		FA1783A525381A2F000BBD32 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		FA1BD91D25354A4C00823540 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		FA2DF84A2545439900EDE5C0 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				FAB46BE0252D7D8200D42054 /* RemoteFeedLoader.swift */,
 				FA8B34D22530208300C16B64 /* FeedItemsMapper.swift */,
+				FA0630AC2546813A0089D667 /* RemoteFeedItem.swift */,
 				FA8B34CE2530202800C16B64 /* HTTPClient.swift */,
 				FA1783A525381A2F000BBD32 /* URLSessionHTTPClient.swift */,
 			);
@@ -336,6 +339,7 @@
 			files = (
 				FA8B34D32530208300C16B64 /* FeedItemsMapper.swift in Sources */,
 				FA50A958252AD5EE005C33A2 /* FeedLoader.swift in Sources */,
+				FA0630AD2546813A0089D667 /* RemoteFeedItem.swift in Sources */,
 				FAB46BE1252D7D8200D42054 /* RemoteFeedLoader.swift in Sources */,
 				FA2DF8532545440600EDE5C0 /* FeedStore.swift in Sources */,
 				FA2DF84B2545439900EDE5C0 /* LocalFeedLoader.swift in Sources */,
