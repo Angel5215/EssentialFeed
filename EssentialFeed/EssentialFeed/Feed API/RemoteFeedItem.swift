@@ -9,9 +9,9 @@ import Foundation
 
 // FeedItem represented in the context of the API to avoid
 // leaking implementation details from the Boundaries module
-internal struct RemoteFeedItem: Decodable {
-    internal let id: UUID
-    internal let description: String?
-    internal let location: String?
-    internal let image: URL
+struct RemoteFeedItem: Decodable {
+    let id: UUID
+    let description: String?
+    let location: String?
+    let image: URL
 }
