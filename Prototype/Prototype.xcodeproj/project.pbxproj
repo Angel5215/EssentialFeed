@@ -12,6 +12,7 @@
 		FAA9947125689CF000C703D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA9946F25689CF000C703D6 /* Main.storyboard */; };
 		FAA9947325689CF000C703D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA9947225689CF000C703D6 /* Assets.xcassets */; };
 		FAA9947625689CF000C703D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA9947425689CF000C703D6 /* LaunchScreen.storyboard */; };
+		FAA994812568A39300C703D6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA994802568A39300C703D6 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FAA9947225689CF000C703D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA9947525689CF000C703D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA9947725689CF000C703D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA994802568A39300C703D6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FAA9946925689CF000C703D6 /* AppDelegate.swift */,
 				FAA9946B25689CF000C703D6 /* SceneDelegate.swift */,
 				FAA9946F25689CF000C703D6 /* Main.storyboard */,
+				FAA994802568A39300C703D6 /* FeedViewController.swift */,
 				FAA9947225689CF000C703D6 /* Assets.xcassets */,
 				FAA9947425689CF000C703D6 /* LaunchScreen.storyboard */,
 				FAA9947725689CF000C703D6 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA9946A25689CF000C703D6 /* AppDelegate.swift in Sources */,
+				FAA994812568A39300C703D6 /* FeedViewController.swift in Sources */,
 				FAA9946C25689CF000C703D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
