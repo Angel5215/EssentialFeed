@@ -49,6 +49,7 @@
 		FAC160BA25630DE000B51517 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA703ED253802A300483E5C /* XCTestCase+MemoryLeakTracking.swift */; };
 		FAC160BF2563111800B51517 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A105254D5660003777FA /* FeedCacheTestHelpers.swift */; };
 		FAC160C42563113C00B51517 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A10A254D575E003777FA /* SharedTestHelpers.swift */; };
+		FAED3EC3256CBE9300F3CD5E /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		FAC160AB25630B1100B51517 /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC160AD25630B1100B51517 /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		FAC160AF25630B1100B51517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				FA29C80F2569E580009594FB /* Info.plist */,
 				FAB70D47256B0CBB00884570 /* FeedViewController.swift */,
+				FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB70D48256B0CBB00884570 /* FeedViewController.swift in Sources */,
+				FAED3EC3256CBE9300F3CD5E /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
