@@ -52,6 +52,7 @@
 		FAC160C42563113C00B51517 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A10A254D575E003777FA /* SharedTestHelpers.swift */; };
 		FAC1BDB3257436150051CF7C /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDB2257436150051CF7C /* UIImage+TestHelpers.swift */; };
 		FAC1BDC12574369B0051CF7C /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDC02574369B0051CF7C /* UIRefreshControl+TestHelpers.swift */; };
+		FAC1BDCF257436D30051CF7C /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDCE257436D30051CF7C /* UIButton+TestHelpers.swift */; };
 		FAED3EC3256CBE9300F3CD5E /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		FAC160AF25630B1100B51517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC1BDB2257436150051CF7C /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAC1BDC02574369B0051CF7C /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		FAC1BDCE257436D30051CF7C /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -383,6 +385,7 @@
 			children = (
 				FAC1BDB2257436150051CF7C /* UIImage+TestHelpers.swift */,
 				FAC1BDC02574369B0051CF7C /* UIRefreshControl+TestHelpers.swift */,
+				FAC1BDCE257436D30051CF7C /* UIButton+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				FAC1BDC12574369B0051CF7C /* UIRefreshControl+TestHelpers.swift in Sources */,
 				FAB70D40256B030000884570 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				FAC1BDB3257436150051CF7C /* UIImage+TestHelpers.swift in Sources */,
+				FAC1BDCF257436D30051CF7C /* UIButton+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
