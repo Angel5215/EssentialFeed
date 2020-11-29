@@ -55,6 +55,7 @@
 		FAC1BDCF257436D30051CF7C /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDCE257436D30051CF7C /* UIButton+TestHelpers.swift */; };
 		FAC1BDDD257437450051CF7C /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDDC257437450051CF7C /* UIControl+TestHelpers.swift */; };
 		FAC1BDEF257438680051CF7C /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDEE257438680051CF7C /* FeedViewController+TestHelpers.swift */; };
+		FAC1BDFD257438E60051CF7C /* FeedImageCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1BDFC257438E60051CF7C /* FeedImageCell+TestHelpers.swift */; };
 		FAED3EC3256CBE9300F3CD5E /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		FAC1BDCE257436D30051CF7C /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAC1BDDC257437450051CF7C /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAC1BDEE257438680051CF7C /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		FAC1BDFC257438E60051CF7C /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC1BDEE257438680051CF7C /* FeedViewController+TestHelpers.swift */,
+				FAC1BDFC257438E60051CF7C /* FeedImageCell+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				FAC1BDEF257438680051CF7C /* FeedViewController+TestHelpers.swift in Sources */,
 				FAC1BDB3257436150051CF7C /* UIImage+TestHelpers.swift in Sources */,
 				FAC1BDCF257436D30051CF7C /* UIButton+TestHelpers.swift in Sources */,
+				FAC1BDFD257438E60051CF7C /* FeedImageCell+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
