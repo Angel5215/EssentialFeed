@@ -22,13 +22,18 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-Av-776">
                                     <rect key="frame" x="-8" y="-8" width="430" height="50"/>
+                                    <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="KhF-0S-eFO" appends="YES" id="ftn-sZ-ZfC"/>
+                                    </connections>
                                 </label>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="qog-oU-Yqh"/>
                             <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="qog-oU-Yqh" firstAttribute="top" secondItem="jrE-Av-776" secondAttribute="top" constant="8" id="JQr-hC-RyU"/>
                                 <constraint firstItem="jrE-Av-776" firstAttribute="bottom" secondItem="qog-oU-Yqh" secondAttribute="bottom" constant="8" id="eOu-u3-0tS"/>
@@ -43,6 +48,7 @@
                             <rect key="frame" x="0.0" y="670" width="414" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="yIW-hW-C8B" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
@@ -171,6 +177,11 @@ Location</string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gde-Sc-e85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KhF-0S-eFO">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="eEs-Dt-i9L" id="3oy-au-Kx2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="737.68115942028987" y="28.125"/>
         </scene>
