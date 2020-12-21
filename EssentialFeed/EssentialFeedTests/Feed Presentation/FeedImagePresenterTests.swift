@@ -28,9 +28,11 @@ struct FeedImageViewModel<Image> {
 final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == Image {
     
     private let view: View
+    private let imageTransformer: (Data) -> Image?
     
-    init(view: View) {
+    init(view: View, imageTransformer: @escaping (Data) -> Image?) {
         self.view = view
+        self.imageTransformer = imageTransformer
     }
     
     func didStartLoadingImageData(for model: FeedImage) {
@@ -41,6 +43,22 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
                 image: nil,
                 isLoading: true,
                 shouldRetry: false)
+        )
+    }
+    
+    func didFinishLoadingImageData(with data: Data, for model: FeedImage) {
+        guard let image = imageTransformer(data) else {
+            return
+        }
+        
+        view.display(
+            FeedImageViewModel(
+                description: model.description,
+                location: model.location,
+                image: image,
+                isLoading: false,
+                shouldRetry: false
+            )
         )
     }
 }
@@ -61,14 +79,29 @@ class FeedImagePresenterTests: XCTestCase {
         XCTAssertEqual(view.messages, [.display(description: image.description, location: image.location, image: nil, isLoading: true, shouldRetry: false)])
     }
     
+    func test_didFinishLoadingImageData_displaysImageNoRetryStopsLoadingAndShowsCorrectData() {
+        let model = uniqueImage()
+        let data = Data("image data".utf8)
+        let image = successfulImageTransformer(data: data)
+        let (sut, view) = makeSUT(imageTransformer: successfulImageTransformer)
+        
+        sut.didFinishLoadingImageData(with: data, for: model)
+        
+        XCTAssertEqual(view.messages, [.display(description: model.description, location: model.location, image: image, isLoading: false, shouldRetry: false)])
+    }
+    
     // MARK: - Helpers
     
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter<ViewSpy<Image>, Image>, view: ViewSpy<Image>) {
+    private func makeSUT(imageTransformer: @escaping (Data) -> Image? = { _ in Image(data: Data()) }, file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter<ViewSpy<Image>, Image>, view: ViewSpy<Image>) {
         let view = ViewSpy<Image>()
-        let sut = FeedImagePresenter<ViewSpy<Image>, Image>(view: view)
+        let sut = FeedImagePresenter<ViewSpy<Image>, Image>(view: view, imageTransformer: imageTransformer)
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
+    }
+    
+    private func successfulImageTransformer(data: Data) -> Image? {
+        return Image(data: data)
     }
     
     private class ViewSpy<Image: Equatable>: FeedImageView {
@@ -83,6 +116,6 @@ class FeedImagePresenterTests: XCTestCase {
     }
     
     private struct Image: Equatable {
-        
+        let data: Data
     }
 }
