@@ -114,6 +114,15 @@ class FeedImagePresenterTests: XCTestCase {
         XCTAssertEqual(view.messages, [.display(description: model.description, location: model.location, image: nil, isLoading: false, shouldRetry: true)])
     }
     
+    func test_didFinishLoadingImageDataWithError_displaysNoImageAllowsRetryStopsLoadingAndShowsCorrectData() {
+        let model = uniqueImage()
+        let (sut, view) = makeSUT()
+        
+        sut.didFinishLoadingImageData(with: anyNSError(), for: model)
+        
+        XCTAssertEqual(view.messages, [.display(description: model.description, location: model.location, image: nil, isLoading: false, shouldRetry: true)])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(imageTransformer: @escaping (Data) -> Image? = { _ in Image(data: Data()) }, file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter<ViewSpy<Image>, Image>, view: ViewSpy<Image>) {
