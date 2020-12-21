@@ -5,6 +5,7 @@
 //  Created by Ángel Vázquez on 29/11/20.
 //
 
+import EssentialFeed
 import UIKit
 
 protocol FeedImageCellControllerDelegate {
