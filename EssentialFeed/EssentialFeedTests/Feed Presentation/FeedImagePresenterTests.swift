@@ -46,9 +46,11 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
         )
     }
     
+    private struct InvalidImageDataError: Error {}
+    
     func didFinishLoadingImageData(with data: Data, for model: FeedImage) {
         guard let image = imageTransformer(data) else {
-            return
+            return didFinishLoadingImageData(with: InvalidImageDataError(), for: model)
         }
         
         view.display(
@@ -58,6 +60,18 @@ final class FeedImagePresenter<View: FeedImageView, Image> where View.Image == I
                 image: image,
                 isLoading: false,
                 shouldRetry: false
+            )
+        )
+    }
+    
+    func didFinishLoadingImageData(with error: Error, for model: FeedImage) {
+        view.display(
+            FeedImageViewModel(
+                description: model.description,
+                location: model.location,
+                image: nil,
+                isLoading: false,
+                shouldRetry: true
             )
         )
     }
@@ -90,6 +104,16 @@ class FeedImagePresenterTests: XCTestCase {
         XCTAssertEqual(view.messages, [.display(description: model.description, location: model.location, image: image, isLoading: false, shouldRetry: false)])
     }
     
+    func test_didFinishLoadingImageData_displaysNoImageAllowsRetryStopsLoadingAndShowsCorrectDataWhenFailingToTransformImage() {
+        let model = uniqueImage()
+        let data = Data("image data".utf8)
+        let (sut, view) = makeSUT(imageTransformer: failureImageTransformer)
+        
+        sut.didFinishLoadingImageData(with: data, for: model)
+        
+        XCTAssertEqual(view.messages, [.display(description: model.description, location: model.location, image: nil, isLoading: false, shouldRetry: true)])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(imageTransformer: @escaping (Data) -> Image? = { _ in Image(data: Data()) }, file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter<ViewSpy<Image>, Image>, view: ViewSpy<Image>) {
@@ -102,6 +126,10 @@ class FeedImagePresenterTests: XCTestCase {
     
     private func successfulImageTransformer(data: Data) -> Image? {
         return Image(data: data)
+    }
+    
+    private func failureImageTransformer(data: Data) -> Image? {
+        return nil
     }
     
     private class ViewSpy<Image: Equatable>: FeedImageView {
