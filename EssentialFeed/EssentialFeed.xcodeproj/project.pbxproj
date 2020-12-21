@@ -267,6 +267,25 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		FA1D087425903ACF00622679 /* FeedPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C393258C80D700501AE2 /* FeedPresenter.swift */,
+				FA87C3B4258C823400501AE2 /* FeedViewModel.swift */,
+				FA87C3CA258C82A000501AE2 /* FeedLoadingViewModel.swift */,
+				FA87C3BC258C826A00501AE2 /* FeedErrorViewModel.swift */,
+			);
+			name = FeedPresenter;
+			sourceTree = "<group>";
+		};
+		FA1D087525903ADC00622679 /* FeedImagePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D086C25903A2B00622679 /* FeedImagePresenter.swift */,
+			);
+			name = FeedImagePresenter;
+			sourceTree = "<group>";
+		};
 		FA29C80D2569E580009594FB /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,12 +420,9 @@
 		FA87C392258C80C300501AE2 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA87C393258C80D700501AE2 /* FeedPresenter.swift */,
-				FA87C3B4258C823400501AE2 /* FeedViewModel.swift */,
-				FA87C3CA258C82A000501AE2 /* FeedLoadingViewModel.swift */,
-				FA87C3BC258C826A00501AE2 /* FeedErrorViewModel.swift */,
 				FA87C389258C7F3800501AE2 /* Feed.strings */,
-				FA1D086C25903A2B00622679 /* FeedImagePresenter.swift */,
+				FA1D087425903ACF00622679 /* FeedPresenter */,
+				FA1D087525903ADC00622679 /* FeedImagePresenter */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
