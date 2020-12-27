@@ -18,15 +18,21 @@ public final class LocalFeedImageDataLoader {
 extension LocalFeedImageDataLoader {
     public typealias SaveResult = Result<Void, Swift.Error>
     
+    public enum SaveError: Error {
+        case failed
+    }
+    
     public func save(_ data: Data, for url: URL, completion: @escaping (SaveResult) -> Void) {
-        store.insert(data, for: url) { _ in }
+        store.insert(data, for: url) { result in
+            completion(.failure(SaveError.failed))
+        }
     }
 }
 
 extension LocalFeedImageDataLoader: FeedImageDataLoader {
     public typealias LoadResult = FeedImageDataLoader.Result
     
-    public enum LoadError: Swift.Error {
+    public enum LoadError: Error {
         case failed
         case notFound
     }
