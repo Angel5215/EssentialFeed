@@ -1485,7 +1485,7 @@
 				FA236814259AE36400AE2FC2 /* FeedStore2.xcdatamodel */,
 				FACD3EF525970CA80003D0B4 /* FeedStore.xcdatamodel */,
 			);
-			currentVersion = FACD3EF525970CA80003D0B4 /* FeedStore.xcdatamodel */;
+			currentVersion = FA236814259AE36400AE2FC2 /* FeedStore2.xcdatamodel */;
 			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
