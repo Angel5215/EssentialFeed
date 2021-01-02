@@ -5,6 +5,7 @@
 //  Created by Angel Vázquez on 22/11/20.
 //
 
+import EssentialApp
 import EssentialFeed
 import EssentialFeediOS
 import UIKit
