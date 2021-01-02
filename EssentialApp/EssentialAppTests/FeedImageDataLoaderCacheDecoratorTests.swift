@@ -1,5 +1,5 @@
 //
-//  FeedImageLoaderCacheDecoratorTests.swift
+//  FeedImageDataLoaderCacheDecoratorTests.swift
 //  EssentialAppTests
 //
 //  Created by Ángel Vázquez on 01/01/21.
@@ -33,7 +33,7 @@ class FeedImageDataLoaderCacheDecorator: FeedImageDataLoader {
     }
 }
 
-class FeedImageLoaderCacheDecoratorTests: XCTestCase, FeedImageDataLoaderTestCase {
+class FeedImageDataLoaderCacheDecoratorTests: XCTestCase, FeedImageDataLoaderTestCase {
     func test_loadImageData_doesNotLoadImageOnCreation() {
         let (_, loader) = makeSUT()
         
@@ -86,7 +86,6 @@ class FeedImageLoaderCacheDecoratorTests: XCTestCase, FeedImageDataLoaderTestCas
         loader.complete(with: anyData())
         
         XCTAssertEqual(cache.messages, [.save(imageData, for: url)], "Expected to cache loaded image data on success")
-        
     }
     
     // MARK: - Helpers
