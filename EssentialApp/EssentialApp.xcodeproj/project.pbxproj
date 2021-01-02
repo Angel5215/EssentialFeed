@@ -23,6 +23,7 @@
 		FA8A398C259B02DF00DF8974 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8A3989259B02DF00DF8974 /* EssentialFeediOS.framework */; };
 		FA8A398D259B02DF00DF8974 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA8A3989259B02DF00DF8974 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA9D6052259FFE2A0015516F /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D6051259FFE2A0015516F /* FeedLoaderCacheDecoratorTests.swift */; };
+		FA9D6055259FFFCB0015516F /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D6054259FFFCB0015516F /* FeedLoaderStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		FA8A3988259B02DF00DF8974 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A3989259B02DF00DF8974 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9D6051259FFE2A0015516F /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		FA9D6054259FFFCB0015516F /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				FA2E2C9E259C5A8300C1F81B /* XCTestCase+MemoryLeakTracking.swift */,
 				FA2E2CA4259C5AF500C1F81B /* SharedTestHelpers.swift */,
+				FA9D6054259FFFCB0015516F /* FeedLoaderStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				FA9D6052259FFE2A0015516F /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				FA2E2C99259C50C600C1F81B /* FeedImageLoaderWithFallbackCompositeTests.swift in Sources */,
 				FA236855259B00D600AE2FC2 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				FA9D6055259FFFCB0015516F /* FeedLoaderStub.swift in Sources */,
 				FA2E2C9F259C5A8300C1F81B /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
