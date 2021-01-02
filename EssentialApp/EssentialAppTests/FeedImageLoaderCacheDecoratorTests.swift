@@ -16,7 +16,7 @@ class FeedImageDataLoaderCacheDecorator: FeedImageDataLoader {
     }
     
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        return decoratee.loadImageData(from: url) { _ in }
+        return decoratee.loadImageData(from: url, completion: completion)
     }
 }
 
@@ -44,6 +44,23 @@ class FeedImageLoaderCacheDecoratorTests: XCTestCase {
         task.cancel()
         
         XCTAssertEqual(loader.cancelledURLs, [url], "Expected to cancel URL loading from loader")
+    }
+    
+    func test_loadImageData_deliversDataOnLoaderSuccess() {
+        let primaryData = anyData()
+        let (sut, loader) = makeSUT()
+        
+        expect(sut, toCompleteWith: .success(primaryData), when: {
+            loader.complete(with: primaryData)
+        })
+    }
+    
+    func test_loadImageData_deliversErrorOnLoaderFailure() {
+        let (sut, loader) = makeSUT()
+        
+        expect(sut, toCompleteWith: .failure(anyNSError()), when: {
+            loader.complete(with: anyNSError())
+        })
     }
     
     // MARK: - Helpers
