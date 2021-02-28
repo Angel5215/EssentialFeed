@@ -38,6 +38,7 @@
 		FAAF992525A1124800742C3E /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF991225A1124800742C3E /* UIImage+TestHelpers.swift */; };
 		FAAF992625A1124800742C3E /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF991425A1124800742C3E /* UIControl+TestHelpers.swift */; };
 		FAAF993625A1125B00742C3E /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF993525A1125B00742C3E /* FeedUIIntegrationTests.swift */; };
+		FABDF1AD25EC524F00920B6D /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDF1AC25EC524F00920B6D /* CombineHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		FAAF991425A1124800742C3E /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAAF991525A1124800742C3E /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		FAAF993525A1125B00742C3E /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
+		FABDF1AC25EC524F00920B6D /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				FA23683D259B00D400AE2FC2 /* AppDelegate.swift */,
 				FA23683F259B00D400AE2FC2 /* SceneDelegate.swift */,
 				FAAF98F425A1121000742C3E /* FeedUIComposer.swift */,
+				FABDF1AC25EC524F00920B6D /* CombineHelpers.swift */,
 				FAAF98F325A1120F00742C3E /* WeakRefVirtualProxy.swift */,
 				FAAF98F525A1121000742C3E /* FeedImageDataLoaderPresentationAdapter.swift */,
 				FAAF98F625A1121000742C3E /* FeedLoaderPresentationAdapter.swift */,
@@ -307,6 +310,7 @@
 				FAAF98FE25A1121000742C3E /* FeedUIComposer.swift in Sources */,
 				FAAF98FA25A1121000742C3E /* FeedViewAdapter.swift in Sources */,
 				FA236840259B00D400AE2FC2 /* SceneDelegate.swift in Sources */,
+				FABDF1AD25EC524F00920B6D /* CombineHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
