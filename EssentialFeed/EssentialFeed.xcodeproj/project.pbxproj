@@ -14,6 +14,7 @@
 		FA0EC65B267B052600165C49 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EC65A267B052600165C49 /* LoadResourcePresenter.swift */; };
 		FA0EC65F267B0D3600165C49 /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EC65E267B0D3600165C49 /* SharedLocalizationTests.swift */; };
 		FA0EC660267B0DF400165C49 /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA0EC662267B0DF400165C49 /* Shared.strings */; };
+		FA0EC666267B10E500165C49 /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EC665267B10E500165C49 /* SharedLocalizationTestHelpers.swift */; };
 		FA11F473255F8341004B288A /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F472255F8341004B288A /* CoreDataFeedStoreTests.swift */; };
 		FA160837266C3EBF003ED3A7 /* ImageCommentsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA160836266C3EBF003ED3A7 /* ImageCommentsMapperTests.swift */; };
 		FA16083B266C4067003ED3A7 /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16083A266C4067003ED3A7 /* ImageCommentsMapper.swift */; };
@@ -132,6 +133,7 @@
 		FA0EC661267B0DF400165C49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Shared.strings; sourceTree = "<group>"; };
 		FA0EC663267B0DF800165C49 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Shared.strings; sourceTree = "<group>"; };
 		FA0EC664267B0DF900165C49 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Shared.strings"; sourceTree = "<group>"; };
+		FA0EC665267B10E500165C49 /* SharedLocalizationTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTestHelpers.swift; sourceTree = "<group>"; };
 		FA11F472255F8341004B288A /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		FA160836266C3EBF003ED3A7 /* ImageCommentsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapperTests.swift; sourceTree = "<group>"; };
 		FA16083A266C4067003ED3A7 /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 			children = (
 				FAA703ED253802A300483E5C /* XCTestCase+MemoryLeakTracking.swift */,
 				FA54A10A254D575E003777FA /* SharedTestHelpers.swift */,
+				FA0EC665267B10E500165C49 /* SharedLocalizationTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -990,6 +993,7 @@
 				FA868E0B25971FC500897A1E /* URLProtocolStub.swift in Sources */,
 				FA0EC65F267B0D3600165C49 /* SharedLocalizationTests.swift in Sources */,
 				FA38919D2548F9EA007575BC /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
+				FA0EC666267B10E500165C49 /* SharedLocalizationTestHelpers.swift in Sources */,
 				FA607EE1255790E50056B5B2 /* FeedStoreSpecs.swift in Sources */,
 				FAA703EE253802A300483E5C /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				FA607EE6255791650056B5B2 /* XCTestCase+FeedStoreSpecs.swift in Sources */,
