@@ -10,15 +10,6 @@ import EssentialFeediOS
 import XCTest
 
 class FeedSnapshotTests: XCTestCase {
-    func test_emptyFeed() {
-        let sut = makeSUT()
-        
-        sut.display(emptyFeed())
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "EMPTY_FEED_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "EMPTY_FEED_dark")
-    }
-    
     func test_feedWithContent() {
         let sut = makeSUT()
         
@@ -27,16 +18,7 @@ class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_CONTENT_light")
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_CONTENT_dark")
     }
-    
-    func test_feedWithErrorMessage() {
-        let sut = makeSUT()
         
-        sut.display(.error(message: "This is a\nmultiline\nerror message"))
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_ERROR_MESSAGE_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_ERROR_MESSAGE_dark")
-    }
-    
     func test_feedWithFailedImageLoading() {
         let sut = makeSUT()
         
@@ -72,10 +54,6 @@ class FeedSnapshotTests: XCTestCase {
             
             XCTFail("New snapshot does not match stored snapshot. New snapshot URL: \(temporarySnapshotURL), Stored snapshot URL: \(snapshotURL)", file: file, line: line)
         }
-    }
-    
-    private func emptyFeed() -> [FeedImageCellController] {
-        return []
     }
     
     private func feedWithContent() -> [ImageStub] {
