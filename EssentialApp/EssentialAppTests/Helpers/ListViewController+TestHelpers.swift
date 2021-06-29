@@ -9,10 +9,6 @@ import EssentialFeediOS
 import UIKit
 
 extension ListViewController {
-    private var feedImageSection: Int {
-        return 0
-    }
-    
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
     }
@@ -33,6 +29,14 @@ extension ListViewController {
     
     func simulateUserInitiatedReload() {
         refreshControl?.simulatePullToRefresh()
+    }
+}
+
+// MARK: - Feed
+
+extension ListViewController {
+    private var feedImageSection: Int {
+        return 0
     }
     
     @discardableResult
@@ -79,5 +83,38 @@ extension ListViewController {
     
     func renderedFeedImageData(at index: Int) -> Data? {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
+    }
+}
+
+// MARK: - Comments
+
+extension ListViewController {
+    private var commentsSection: Int {
+        return 0
+    }
+    
+    func numberOfRenderedComments() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: commentsSection)
+    }
+    
+    func commentMessage(at row: Int) -> String? {
+        commentView(at: row)?.messageLabel.text
+    }
+    
+    func commentDate(at row: Int) -> String? {
+        commentView(at: row)?.dateLabel.text
+    }
+    
+    func commentUsername(at row: Int) -> String? {
+        commentView(at: row)?.usernameLabel.text
+    }
+    
+    private func commentView(at row: Int) -> ImageCommentCell? {
+        guard numberOfRenderedFeedImageViews() > row else {
+            return nil
+        }
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: commentsSection)
+        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
     }
 }
