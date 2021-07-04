@@ -62,6 +62,8 @@
 		FA5B0CE7253A72F000075D95 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA703ED253802A300483E5C /* XCTestCase+MemoryLeakTracking.swift */; };
 		FA5CDCCB26914315004E310B /* ImageCommentsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CDCCA26914315004E310B /* ImageCommentsEndpointTests.swift */; };
 		FA5CDCCD269143D0004E310B /* FeedEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CDCCC269143D0004E310B /* FeedEndpointTests.swift */; };
+		FA5CDCD326926F13004E310B /* LoadMoreCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CDCD226926F13004E310B /* LoadMoreCellController.swift */; };
+		FA5CDCD5269271E6004E310B /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CDCD4269271E6004E310B /* LoadMoreCell.swift */; };
 		FA5DD5552676BFFC007A8733 /* FeedImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD5542676BFFC007A8733 /* FeedImageDataMapper.swift */; };
 		FA607EE1255790E50056B5B2 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA607EE0255790E50056B5B2 /* FeedStoreSpecs.swift */; };
 		FA607EE6255791650056B5B2 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA607EE5255791650056B5B2 /* XCTestCase+FeedStoreSpecs.swift */; };
@@ -211,6 +213,8 @@
 		FA5B0CDD253A6C0800075D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5CDCCA26914315004E310B /* ImageCommentsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsEndpointTests.swift; sourceTree = "<group>"; };
 		FA5CDCCC269143D0004E310B /* FeedEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpointTests.swift; sourceTree = "<group>"; };
+		FA5CDCD226926F13004E310B /* LoadMoreCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCellController.swift; sourceTree = "<group>"; };
+		FA5CDCD4269271E6004E310B /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		FA5DD5542676BFFC007A8733 /* FeedImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataMapper.swift; sourceTree = "<group>"; };
 		FA607EE0255790E50056B5B2 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		FA607EE5255791650056B5B2 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -774,6 +778,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB5D0972574442C008FF57F /* FeedImageCellController.swift */,
+				FA5CDCD226926F13004E310B /* LoadMoreCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -785,6 +790,7 @@
 				FAED3EC2256CBE9300F3CD5E /* FeedImageCell.swift */,
 				FA56981F257D9CBF00E2A9BE /* Feed.storyboard */,
 				FA569828257D9D3F00E2A9BE /* Feed.xcassets */,
+				FA5CDCD4269271E6004E310B /* LoadMoreCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1070,10 +1076,12 @@
 				FA569837257DA8B800E2A9BE /* UITableView+Dequeueing.swift in Sources */,
 				FAB70D48256B0CBB00884570 /* ListViewController.swift in Sources */,
 				FA56983F257DA9CD00E2A9BE /* UIImageView+Animations.swift in Sources */,
+				FA5CDCD5269271E6004E310B /* LoadMoreCell.swift in Sources */,
 				FAED3EC3256CBE9300F3CD5E /* FeedImageCell.swift in Sources */,
 				FA2977FC2687F870009F4E07 /* ImageCommentCellController.swift in Sources */,
 				FAB5D0982574442C008FF57F /* FeedImageCellController.swift in Sources */,
 				FA2978022687FABE009F4E07 /* ImageCommentCell.swift in Sources */,
+				FA5CDCD326926F13004E310B /* LoadMoreCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
