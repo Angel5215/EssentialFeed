@@ -172,20 +172,44 @@
 		FA2E2CA2259C5AC400C1F81B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E2C9E259C5A8300C1F81B /* XCTestCase+MemoryLeakTracking.swift */,
+				FA2E2CA4259C5AF500C1F81B /* SharedTestHelpers.swift */,
+				FA5CDCD12691458D004E310B /* Feed Test Helpers */,
+				FA5CDCD02691455C004E310B /* List Helpers */,
+				FA5CDCCE26914528004E310B /* UIKit Helpers */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA5CDCCE26914528004E310B /* UIKit Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				FAAF991225A1124800742C3E /* UIImage+TestHelpers.swift */,
 				FAAF990E25A1124800742C3E /* UIRefreshControl+TestHelpers.swift */,
 				FAAF991125A1124800742C3E /* UIButton+TestHelpers.swift */,
 				FAAF991425A1124800742C3E /* UIControl+TestHelpers.swift */,
+			);
+			name = "UIKit Helpers";
+			sourceTree = "<group>";
+		};
+		FA5CDCD02691455C004E310B /* List Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				FAAF990D25A1124800742C3E /* ListViewController+TestHelpers.swift */,
+			);
+			name = "List Helpers";
+			sourceTree = "<group>";
+		};
+		FA5CDCD12691458D004E310B /* Feed Test Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA9D606825A0123B0015516F /* FeedImageDataLoaderSpy.swift */,
 				FAAF991525A1124800742C3E /* FeedImageCell+TestHelpers.swift */,
 				FAAF991325A1124800742C3E /* FeedViewControllerTests+LoaderSpy.swift */,
 				FAAF990F25A1124800742C3E /* FeedViewControllerTests+Assertions.swift */,
-				FA2E2C9E259C5A8300C1F81B /* XCTestCase+MemoryLeakTracking.swift */,
-				FA2E2CA4259C5AF500C1F81B /* SharedTestHelpers.swift */,
-				FA9D606825A0123B0015516F /* FeedImageDataLoaderSpy.swift */,
 				FA9D606B25A012A10015516F /* XCTestCase+FeedImageDataLoader.swift */,
 			);
-			path = Helpers;
+			name = "Feed Test Helpers";
 			sourceTree = "<group>";
 		};
 		FA8A3987259B02DF00DF8974 /* Frameworks */ = {
