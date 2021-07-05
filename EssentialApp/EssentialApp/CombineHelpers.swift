@@ -9,6 +9,18 @@ import Combine
 import EssentialFeed
 import Foundation
 
+// MARK: - Paginated
+public extension Paginated {
+    var loadMorePublisher: (() -> AnyPublisher<Self, Error>)? {
+        guard let loadMore = loadMore else { return nil }
+        return {
+            Deferred {
+                Future(loadMore)
+            }.eraseToAnyPublisher()
+        }
+    }
+}
+
 // MARK: - HTTPClient
 
 public extension HTTPClient {
