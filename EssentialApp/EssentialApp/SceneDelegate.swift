@@ -113,9 +113,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         return localImageLoader
             .loadImageDataPublisher(from: url)
-            .fallback (to: { [httpClient] in
+            .logCacheMisses(url: url, logger: logger)
+            .fallback (to: { [logger, httpClient] in
                 httpClient
                     .getPublisher(url: url)
+                    .logErrors(url: url, logger: logger)
+                    .logElapsedTime(url: url, logger: logger)
                     .tryMap(FeedImageDataMapper.map)
                     .caching(to: localImageLoader, using: url)
             })
@@ -134,5 +137,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .tryMap(ImageCommentsMapper.map)
                 .eraseToAnyPublisher()
         }
+    }
+}
+
+extension Publisher {
+    func logElapsedTime(url: URL, logger: Logger) -> AnyPublisher<Output, Failure> {
+        var startTime = CACurrentMediaTime()
+        return handleEvents(receiveSubscription: { _ in
+            logger.trace("Started loading URL: \(url)")
+            startTime = CACurrentMediaTime()
+        }, receiveCompletion: { result in
+            let elapsed = CACurrentMediaTime() - startTime
+            logger.trace("Finished loading URL: \(url) in \(elapsed) seconds")
+        }).eraseToAnyPublisher()
+    }
+    
+    func logErrors(url: URL, logger: Logger) -> AnyPublisher<Output, Failure> {
+        handleEvents(receiveCompletion: { result in
+            if case let .failure(error) = result {
+                logger.trace("Failed to load URL: \(url) with error: \(error.localizedDescription)")
+            }
+        })
+        .eraseToAnyPublisher()
+    }
+    
+    func logCacheMisses(url: URL, logger: Logger) -> AnyPublisher<Output, Failure> {
+        handleEvents(receiveCompletion: { result in
+            if case .failure = result {
+                logger.trace("Cache miss for URL: \(url)")
+            }
+        })
+        .eraseToAnyPublisher()
     }
 }
