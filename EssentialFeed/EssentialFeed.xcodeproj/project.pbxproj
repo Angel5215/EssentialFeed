@@ -71,7 +71,7 @@
 		FA70C06026893E980045717D /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70C05F26893E980045717D /* CellController.swift */; };
 		FA72EDBF252C1CF5006B18D6 /* FeedItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72EDBE252C1CF5006B18D6 /* FeedItemsMapperTests.swift */; };
 		FA74FA72266D91B00095883C /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74FA71266D91B00095883C /* ImageComment.swift */; };
-		FA763FF52598141F0001B582 /* LocalFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA763FF42598141F0001B582 /* LocalFeedImageDataFromCacheUseCaseTests.swift */; };
+		FA763FF52598141F0001B582 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA763FF42598141F0001B582 /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		FA763FFD259836ED0001B582 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA763FFC259836ED0001B582 /* LocalFeedImageDataLoader.swift */; };
 		FA764005259836F40001B582 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA764004259836F40001B582 /* FeedImageDataStore.swift */; };
 		FA76401325983B510001B582 /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76401225983B510001B582 /* FeedImageDataStoreSpy.swift */; };
@@ -223,7 +223,7 @@
 		FA70C05F26893E980045717D /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		FA72EDBE252C1CF5006B18D6 /* FeedItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapperTests.swift; sourceTree = "<group>"; };
 		FA74FA71266D91B00095883C /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
-		FA763FF42598141F0001B582 /* LocalFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
+		FA763FF42598141F0001B582 /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		FA763FFC259836ED0001B582 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		FA764004259836F40001B582 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		FA76401225983B510001B582 /* FeedImageDataStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStoreSpy.swift; sourceTree = "<group>"; };
@@ -750,7 +750,7 @@
 				FA3891A12548FB7B007575BC /* Helpers */,
 				FAB36EC12543B16F00A72D4B /* FeedCacheUseCaseTests.swift */,
 				FA76401A25983BEF0001B582 /* CacheFeedImageDataUseCaseTests.swift */,
-				FA763FF42598141F0001B582 /* LocalFeedImageDataFromCacheUseCaseTests.swift */,
+				FA763FF42598141F0001B582 /* LoadFeedImageDataFromCacheUseCaseTests.swift */,
 				FA38919C2548F9EA007575BC /* LoadFeedFromCacheUseCaseTests.swift */,
 				FA54A100254D53A8003777FA /* ValidateFeedCacheUseCaseTests.swift */,
 				FA607EE5255791650056B5B2 /* XCTestCase+FeedStoreSpecs.swift */,
@@ -1152,7 +1152,7 @@
 			files = (
 				FA0EC658267B041700165C49 /* LoadResourcePresenterTests.swift in Sources */,
 				FA87C372258C75A900501AE2 /* FeedPresenterTests.swift in Sources */,
-				FA763FF52598141F0001B582 /* LocalFeedImageDataFromCacheUseCaseTests.swift in Sources */,
+				FA763FF52598141F0001B582 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				FA76401B25983BEF0001B582 /* CacheFeedImageDataUseCaseTests.swift in Sources */,
 				FA11F473255F8341004B288A /* CoreDataFeedStoreTests.swift in Sources */,
 				FA150E63267EB2350077D8BA /* ImageCommentsLocalizationTests.swift in Sources */,
