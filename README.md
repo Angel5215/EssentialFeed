@@ -2,9 +2,8 @@
 # Essential Feed
 
 <p align="center">
-    <a href="https://travis-ci.org/Angel5215/EssentialFeed">
-        <img src="https://travis-ci.org/Angel5215/EssentialFeed.svg?branch=main" alt="Build Status"/>
-    </a>
+    <img src="https://github.com/Angel5215/EssentialFeed/workflows/CI-macOS/badge.svg" alt="Build Status"/>
+    <img src="https://github.com/Angel5215/EssentialFeed/workflows/CI-iOS/badge.svg" alt="Build Status"/>
 </p>
 
 App that displays users' feed images following TDD and Clean Code principles. 
